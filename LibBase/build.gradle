@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
 }
+group='com.github.Shsy'
 
 android {
     compileSdk 31
