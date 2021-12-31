@@ -3,8 +3,21 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'maven-publish'
 }
-group='com.github.Shsy'
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.Shsy'
+                artifactId = 'AndroidBase'
+                version = '1.0.4'
+            }
+        }
+    }
+}
 
 android {
     compileSdk 31
