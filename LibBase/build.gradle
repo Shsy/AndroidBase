@@ -11,7 +11,7 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.Shsy'
+                groupId = 'com.github.Shsy.LibBase'
                 artifactId = 'LibBase'
                 version = '1.0.6'
             }
