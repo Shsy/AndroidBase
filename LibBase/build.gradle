@@ -12,8 +12,8 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.Shsy'
-                artifactId = 'AndroidBase'
-                version = '1.0.4'
+                artifactId = 'LibBase'
+                version = '1.0.6'
             }
         }
     }
