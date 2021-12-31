@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#009EFD</color>
+    <color name="secondary">#A8DEFF</color>
+    <color name="tertiary">#DFF3FF</color>
+
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_tertiary">#999999</color>
+
+    <color name="page_background_white">@color/white</color>
+    <color name="page_background_gray">#F2F4F7</color>
+
+    <color name="checked">#009EFD</color>
+
+    <color name="divider">#EAEBF0</color>
+
+    <color name="text_red">#ED3535</color>
+</resources>
