@@ -18,7 +18,7 @@ import java.io.IOException
  */
 object DataStoreUtil {
     const val USER_TOKEN = "USER_TOKEN"// 用户token
-
+    const val IS_FIRST_OPEN = "IS_FIRST_OPEN"// 第一次打开
 
     @Suppress("UNCHECKED_CAST")
     fun <U> getSyncData(key: String, default: U): U {
