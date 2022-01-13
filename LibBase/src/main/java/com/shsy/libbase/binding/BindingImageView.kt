@@ -3,6 +3,8 @@ package com.shsy.libbase.binding
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import coil.load
+import coil.transform.RoundedCornersTransformation
+import com.shsy.libbase.utils.DisplayUtil
 
 /**
  * @ClassName BindingImageView
@@ -16,11 +18,17 @@ fun ImageView.bindImgResource(imgResource: Int) {
     this.setImageResource(imgResource)
 }
 
-@BindingAdapter("imgUrl")
-fun ImageView.bindImgUrl(imgUrl: String?) {
+@BindingAdapter("imgUrl", "radius", requireAll = false)
+fun ImageView.bindImgUrl(imgUrl: String?, radius: Int? = 0) {
     if (imgUrl.isNullOrEmpty()) {
 
     } else {
-        this.load(imgUrl)
+        this.load(imgUrl) {
+            transformations(
+                RoundedCornersTransformation(
+                    DisplayUtil.dp2px(radius?.toFloat() ?: 0F).toFloat()
+                )
+            )
+        }
     }
 }
