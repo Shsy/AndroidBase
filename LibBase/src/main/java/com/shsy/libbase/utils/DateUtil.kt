@@ -142,9 +142,9 @@ object DateUtil {
         val endTime = SimpleDateFormat("yyyy-MM-dd HH:mm").parse(end).time
         val nowTime = System.currentTimeMillis()
         return when {
-            startTime < nowTime -> 0
+            nowTime < startTime -> 0
             nowTime > startTime && nowTime < endTime -> 1
-            endTime > nowTime -> 2
+            nowTime > endTime -> 2
             else -> -1
         }
     }
